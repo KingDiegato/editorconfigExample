@@ -179,7 +179,7 @@ stages:
       displayName: 'Lint dotnet'
       inputs:
         command: 'custom'
-        custom: 'format./editorconfigExample.sln'
+        custom: 'format ./editorconfigExample.sln'
         arguments: '--verify-no-changes --verbosity diagnostic'
 ```
 
