@@ -158,6 +158,7 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
 
+    steps:
     - task: UseDotNet@2
       inputs:
         packageType: 'sdk'
@@ -179,8 +180,8 @@ stages:
       displayName: 'Lint dotnet'
       inputs:
         command: 'custom'
-        custom: 'format ./editorconfigExample.sln'
-        arguments: '--verify-no-changes --verbosity diagnostic'
+        custom: 'format'
+        arguments: './editorconfigExample.sln --verify-no-changes --verbosity diagnostic'
 ```
 
 |vantagens | desvantagens|
