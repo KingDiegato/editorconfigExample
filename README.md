@@ -191,6 +191,18 @@ stages:
 | Para projetos novos é perfeito e para equipes bem estruturadas é ainda melhor | Para projetos legados ou com muitas equipes diferentes, pode ser difícil de aplicar as regras de formatação sem causar muitos conflitos ou problemas de merge ou integração continua. |
 | O Visual Studio possui uma interface gráfica para configurar o editorconfig, funciona automático sem plugins adicionais. | Com outros IDE como Rider de JetBrains, pode ter conflitos com algumas regras, é melhor a equipe usar o mesmo IDE para evitar esses problemas. |
 
+## Teste esse exemplo em local
+
+1. Clone o repositório para sua máquina local usando o comando `git clone <repository-url>`.
+
+2. Navegue até o diretório do projeto usando o terminal ou prompt de comando.  
+3. Copie e use o comando `dotnet format --verify-no-changes .\editorconfigExample.sln --verbosity diagnostic` 
+para verificar se o código está seguindo as regras de formatação definidas no arquivo .editorconfig.
+
+4. Revise o output do comando e veja como foram revisadas as regras do .editorconfig e as advertencias
+especificadas ali, ele indica o arquivo, a linha e o span onde se encontra o erro e qual é o erro e uma 
+possivel solução se houver
+
 ## Bibliografia
 
 - [EditorConfig](https://editorconfig.org/)
