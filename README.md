@@ -193,7 +193,7 @@ stages:
 
 ## Teste esse exemplo em local
 
-1. Clone o repositório para sua máquina local usando o comando `git clone <repository-url>`.
+1. Clone o repositório para sua máquina local usando o comando `git clone https://github.com/KingDiegato/editorconfigExample.git`.
 
 2. Navegue até o diretório do projeto usando o terminal ou prompt de comando.  
 3. Copie e use o comando `dotnet format --verify-no-changes .\editorconfigExample.sln --verbosity diagnostic` 
