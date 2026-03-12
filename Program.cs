@@ -4,6 +4,11 @@ namespace editorconfigExample;
 
 public class Example
 {
+  public static void Main()
+  {
+    Method();
+  }
+
   public static void Method()
   {
     var instance = GetInstanceDto();
