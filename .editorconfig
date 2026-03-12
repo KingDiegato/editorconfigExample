@@ -24,21 +24,23 @@ csharp_style_prefer_extended_property_pattern = true:suggestion
 csharp_indent_labels = one_less_than_current
 csharp_prefer_static_local_function = true:suggestion
 csharp_space_between_empty_square_brackets = false
+csharp_prefer_simple_using_statement = true:suggestion
+csharp_style_deconstructed_variable_declaration = true:suggestion
 
 [*.{cs,vb}]
 #### Estilos de nomenclatura ####
 
 # Regras de nomenclatura
 
-dotnet_naming_rule.interface_should_be_começa_com_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_começa_com_i.severity = warning
 dotnet_naming_rule.interface_should_be_começa_com_i.symbols = interface
 dotnet_naming_rule.interface_should_be_começa_com_i.style = começa_com_i
 
-dotnet_naming_rule.tipos_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.tipos_should_be_pascal_case.severity = warning
 dotnet_naming_rule.tipos_should_be_pascal_case.symbols = tipos
 dotnet_naming_rule.tipos_should_be_pascal_case.style = pascal_case
 
-dotnet_naming_rule.membros_sem_campo_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.membros_sem_campo_should_be_pascal_case.severity = warning
 dotnet_naming_rule.membros_sem_campo_should_be_pascal_case.symbols = membros_sem_campo
 dotnet_naming_rule.membros_sem_campo_should_be_pascal_case.style = pascal_case
 
@@ -82,3 +84,6 @@ tab_width = 4
 indent_size = 2
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
 indent_style = space
+dotnet_diagnostic.CA1008.severity = silent
+dotnet_diagnostic.CA1040.severity = error
+dotnet_style_prefer_auto_properties = true:silent
