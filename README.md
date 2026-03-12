@@ -1,9 +1,9 @@
-# Alinhamentos de formato de cÛdigo e ferramentas para CR.
+# Alinhamentos de formato de c√≥digo e ferramentas para CR.
 
-Para o desenvolvimento em .net com C# entre um grupo de desenvolvedores, È importante a criaÁ„o de um 
-formato estandardizado e bem limpo das boas pr·ticas do cÛdigo, para manter uma consistÍncia no trabalho 
-de cada um e ajudar a quem faz o Code Review a poder ler mais f·cil o conte˙do sem ter tanto ruido na 
-tela das alteraÁıes.
+Para o desenvolvimento em .net com C# entre um grupo de desenvolvedores, √© importante a cria√ß√£o de um 
+formato estandardizado e bem limpo das boas pr√°ticas do c√≥digo, para manter uma consist√™ncia no trabalho 
+de cada um e ajudar a quem faz o Code Review a poder ler mais f√°cil o conte√∫do sem ter tanto ruido na 
+tela das altera√ß√µes.
 	
 Para Visual Studio, existe uma ferramenta sem necessidade de plugin para definir as regras a serem 
 aplicadas: Editor Config.
@@ -50,29 +50,29 @@ indent_size = 2
 ```
 > [Editor config example](https://editorconfig.org/#example-file)
 
-O editor config funciona perfeitamente no Visual Studio sem plugin e ainda pode definir regras especÌficas 
-usando regexp para os arquivos de interesse, permitindo dimensionar as regras para v·rias linguagens de 
-programaÁ„o, tem uma sintaxe declarativa e possui uma documentaÁ„o ampla e com uma comunidade grande de 
+O editor config funciona perfeitamente no Visual Studio sem plugin e ainda pode definir regras espec√≠ficas 
+usando regexp para os arquivos de interesse, permitindo dimensionar as regras para v√°rias linguagens de 
+programa√ß√£o, tem uma sintaxe declarativa e possui uma documenta√ß√£o ampla e com uma comunidade grande de 
 desenvolvedores que indicam o uso.
 
-As regras de formato s„o aplicadas imediatamente que definidas no arquivo .editorconfig no visual studio 
-no mesmo nÌvel da soluÁ„o (arquivo .sln). o dotnet interpreter para as versıes 6.0 ou maior possue uns 
-comandos para aplicar ou diagnosticar a limpeza de cÛdigo, por padr„o, ele possui regras de Microsoft 
+As regras de formato s√£o aplicadas imediatamente que definidas no arquivo .editorconfig no visual studio 
+no mesmo n√≠vel da solu√ß√£o (arquivo .sln). o dotnet interpreter para as vers√µes 6.0 ou maior possue uns 
+comandos para aplicar ou diagnosticar a limpeza de c√≥digo, por padr√£o, ele possui regras de Microsoft 
 definidas no internal do IDE Visual Studio, quando definido o arquivo .editorconfig, ele passa a usar 
-essas regras para a soluÁ„o imediata definida.
+essas regras para a solu√ß√£o imediata definida.
 
-O comando para aplicar as regras de limpeza de cÛdigo È
+O comando para aplicar as regras de limpeza de c√≥digo √©
 ```bash
 dotnet format <solutionPath.sln>
 ```
 
-Esse comando aplica as regras diretamente no cÛdigo de todos os arquivos da soluÁ„o, o direito dele assim
-n„o È para ser usado em um ambiente de desenvolvimento, ele È mais recomendado para ser usado em um 
-ambiente de integraÁ„o contÌnua, onde o cÛdigo È verificado e formatado antes de ser integrado ao branch 
-principal, evitando que o cÛdigo com formataÁ„o incorreta seja integrado ao projeto.
+Esse comando aplica as regras diretamente no c√≥digo de todos os arquivos da solu√ß√£o, o direito dele assim
+n√£o √© para ser usado em um ambiente de desenvolvimento, ele √© mais recomendado para ser usado em um 
+ambiente de integra√ß√£o cont√≠nua, onde o c√≥digo √© verificado e formatado antes de ser integrado ao branch 
+principal, evitando que o c√≥digo com formata√ß√£o incorreta seja integrado ao projeto.
 
-Para o desenvolvimento È importante usar um param que indica que apenas quer fazer um an·lise do cÛdigo,
-sem aplicar as regras, para isso, o comando È
+Para o desenvolvimento √© importante usar um param que indica que apenas quer fazer um an√°lise do c√≥digo,
+sem aplicar as regras, para isso, o comando √©
 ```bash
 dotnet format --verify-no-changes <solutionPath.sln>
 ```
@@ -83,16 +83,16 @@ o param --include ao final do comando, como no exemplo abaixo
 dotnet format --verify-no-changes <solutionPath.sln> --include <folderPath>
 ```
 
-isso ajuda ao desenvolvedor a verificar se o cÛdigo que ele alterou ou criou est· seguindo as regras de
-formataÁ„o definidas, tambÈm garante que possa ver quais regras est„o sendo aplicadas, pois geralmente n„o
-È preciso aplicar todas as regras de formataÁ„o que o visual studio tem, pois algumas podem n„o ser de 
+isso ajuda ao desenvolvedor a verificar se o c√≥digo que ele alterou ou criou est√° seguindo as regras de
+formata√ß√£o definidas, tamb√©m garante que possa ver quais regras est√£o sendo aplicadas, pois geralmente n√£o
+√© preciso aplicar todas as regras de formata√ß√£o que o visual studio tem, pois algumas podem n√£o ser de 
 interesse para o time, com isso pode levantar o caso de ignorar algumas regras conversando com o time.
 
-o editorconfig possui um suporte amplo para definir essas regras, ent„o, facilmente pode ser pesquisada a 
-regra de interesse e adicionada caso seja necess·ria.
+o editorconfig possui um suporte amplo para definir essas regras, ent√£o, facilmente pode ser pesquisada a 
+regra de interesse e adicionada caso seja necess√°ria.
 
-Para saber se realmente est· a executar as regras do editorconfig, pode ser usado os params `--verbosity diagnostic`
-para ter os detalhes e verificar quais regras est„o sendo aplicadas, o comando seria tal que
+Para saber se realmente est√° a executar as regras do editorconfig, pode ser usado os params `--verbosity diagnostic`
+para ter os detalhes e verificar quais regras est√£o sendo aplicadas, o comando seria tal que
 ```bash
 dotnet format --verify-no-changes <solutionPath.sln> --verbosity diagnostic --include <folderPath>
 ```
@@ -101,43 +101,43 @@ Um output de exemplo com o comando de acima e com o projeto atual seria algo com
 ```info
 PS C:\Users\diego.busnego\source\repos\editorconfigExample> dotnet format --verify-no-changes .\editorconfigExample.sln --verbosity diagnostic --include .\Program.cs
 
-  A vers„o do dotnet runtime È '9.0.13'.
+  A vers√£o do dotnet runtime √© '9.0.13'.
   Usando MSBuild.exe localizado em 'C:\Program Files\dotnet\sdk\9.0.311\'.
-  FormataÁ„o de arquivos de cÛdigo no espaÁo de trabalho 'C:\Users\diego.busnego\source\repos\editorconfigExample\editorconfigExample.sln'.
-  Carregando espaÁo de trabalho.
+  Formata√ß√£o de arquivos de c√≥digo no espa√ßo de trabalho 'C:\Users\diego.busnego\source\repos\editorconfigExample\editorconfigExample.sln'.
+  Carregando espa√ßo de trabalho.
     Determinando os projetos a serem restaurados...
-  Todos os projetos est„o atualizados para restauraÁ„o.
-  O projeto editorconfigExample est· usando a configuraÁ„o de 'C:\Users\diego.busnego\source\repos\editorconfigExample\.editorconfig'.
-  O projeto editorconfigExample est· usando a configuraÁ„o de 'C:\Users\diego.busnego\source\repos\editorconfigExample\obj\Debug\net9.0\editorconfigExample.GeneratedMSBuildEditorConfig.editorconfig'.
-  O projeto editorconfigExample est· usando a configuraÁ„o de 'C:\Program Files\dotnet\sdk\9.0.311\Sdks\Microsoft.NET.Sdk\analyzers\build\config\analysislevel_9_default.globalconfig'.
+  Todos os projetos est√£o atualizados para restaura√ß√£o.
+  O projeto editorconfigExample est√° usando a configura√ß√£o de 'C:\Users\diego.busnego\source\repos\editorconfigExample\.editorconfig'.
+  O projeto editorconfigExample est√° usando a configura√ß√£o de 'C:\Users\diego.busnego\source\repos\editorconfigExample\obj\Debug\net9.0\editorconfigExample.GeneratedMSBuildEditorConfig.editorconfig'.
+  O projeto editorconfigExample est√° usando a configura√ß√£o de 'C:\Program Files\dotnet\sdk\9.0.311\Sdks\Microsoft.NET.Sdk\analyzers\build\config\analysislevel_9_default.globalconfig'.
   Concluir em 2864 ms.
-  Determinando arquivos format·veis.
+  Determinando arquivos format√°veis.
   Concluir em 130 ms.
   Executando formatadores.
-  Executando a an·lise de Estilo do CÛdigo.
-  Determinando os diagnÛsticos...
+  Executando a an√°lise de Estilo do C√≥digo.
+  Determinando os diagn√≥sticos...
   Executando 3 analisadores em editorconfigExample.
   Concluir em 1469 ms.
-  An·lise concluÌda em 1470 ms.
-  Executando a an·lise de ReferÍncia do Analisador.
-  Determinando os diagnÛsticos...
+  An√°lise conclu√≠da em 1470 ms.
+  Executando a an√°lise de Refer√™ncia do Analisador.
+  Determinando os diagn√≥sticos...
   Executando 150 analisadores em editorconfigExample.
   Concluir em 257 ms.
-  An·lise concluÌda em 257 ms.
+  An√°lise conclu√≠da em 257 ms.
   Concluir em 2440 ms.
   0 de 4 arquivos formatados.
-  FormataÁ„o concluÌda em 5435 ms.
+  Formata√ß√£o conclu√≠da em 5435 ms.
 
 ```
 
-Pudendo detalhar a vers„o do runtime, o build do sdk e indicando o path do arquivo de configuraÁ„o do 
-editorconfig, alÈm de mostrar o processo de an·lise e formataÁ„o, indicando quais regras est„o sendo 
-aplicadas e quais arquivos est„o sendo formatados ou n„o.
+Pudendo detalhar a vers√£o do runtime, o build do sdk e indicando o path do arquivo de configura√ß√£o do 
+editorconfig, al√©m de mostrar o processo de an√°lise e formata√ß√£o, indicando quais regras est√£o sendo 
+aplicadas e quais arquivos est√£o sendo formatados ou n√£o.
 
-Quando È bem sucedido e sem o `--verbosity` o comando simplesmente n„o retorna nada, quando tem o verbosity
-ele indica a duraÁ„o de cada etapa do processo e a quantidade de arquivos formatados, se È usado o 
-`--verify-no-changes` ele indica a quantidade de arquivos que n„o est„o seguindo as regras, indicando 
-quais regras est„o sendo violadas, o que ajuda o desenvolvedor a corrigir o cÛdigo antes de tentar 
+Quando √© bem sucedido e sem o `--verbosity` o comando simplesmente n√£o retorna nada, quando tem o verbosity
+ele indica a dura√ß√£o de cada etapa do processo e a quantidade de arquivos formatados, se √© usado o 
+`--verify-no-changes` ele indica a quantidade de arquivos que n√£o est√£o seguindo as regras, indicando 
+quais regras est√£o sendo violadas, o que ajuda o desenvolvedor a corrigir o c√≥digo antes de tentar 
 integrar ao branch principal.
 
 Esse projeto serve como exemplo para mostrar o uso do editorconfig e do dotnet format para os projetos
@@ -145,11 +145,11 @@ em .net, o comando recomendado para usar depende do ambiente.
 
 Desenvolvimento: `dotnet format --verify-no-changes <solutionPath.sln> --include <folderPath> --verbosity diagnostic`
 
-IntegraÁ„o contÌnua: `dotnet format --verify-no-changes <solutionPath.sln> --verbosity diagnostic`
+Integra√ß√£o cont√≠nua: `dotnet format --verify-no-changes <solutionPath.sln> --verbosity diagnostic`
 
-AplicaÁ„o de regras: `dotnet format <solutionPath.sln> --include <folderPath>`
+Aplica√ß√£o de regras: `dotnet format <solutionPath.sln> --include <folderPath>`
 
-Exemplo de arquivo YAML para integraÁ„o contÌnua no azure pipelines
+Exemplo de arquivo YAML para integra√ß√£o cont√≠nua no azure pipelines
 ```yaml
 stages:
 - stage: build
@@ -186,23 +186,24 @@ stages:
 
 |vantagens | desvantagens|
 |---|---|
-| F·cil de usar, sem necessidade de plugins adicionais. | Pode ser complexo para configurar regras especÌficas para diferentes linguagens ou projetos. |
-| Para .NET, funciona bem com dotnet e versıes 6.0 ou superior. | Pode n„o respeitar as regras de .NET framework se for usado para verificar arquivos em essas versıes. |
-| Permite definir regras especÌficas para arquivos ou pastas usando regex. | Pode ser difÌcil de entender para desenvolvedores que n„o est„o familiarizados com a sintaxe do editorconfig. |
-| Para projetos novos È perfeito e para equipes bem estruturadas È ainda melhor | Para projetos legados ou com muitas equipes diferentes, pode ser difÌcil de aplicar as regras de formataÁ„o sem causar muitos conflitos ou problemas de merge ou integraÁ„o continua. |
-| O Visual Studio possui uma interface gr·fica para configurar o editorconfig, funciona autom·tico sem plugins adicionais. | Com outros IDE como Rider de JetBrains, pode ter conflitos com algumas regras, È melhor a equipe usar o mesmo IDE para evitar esses problemas. |
+| F√°cil de usar, sem necessidade de plugins adicionais. | Pode ser complexo para configurar regras espec√≠ficas para diferentes linguagens ou projetos. |
+| Para .NET, funciona bem com dotnet e vers√µes 6.0 ou superior. | Pode n√£o respeitar as regras de .NET framework se for usado para verificar arquivos em essas vers√µes. |
+| Permite definir regras espec√≠ficas para arquivos ou pastas usando regex. | Pode ser dif√≠cil de entender para desenvolvedores que n√£o est√£o familiarizados com a sintaxe do editorconfig. |
+| Para projetos novos √© perfeito e para equipes bem estruturadas √© ainda melhor | Para projetos legados ou com muitas equipes diferentes, pode ser dif√≠cil de aplicar as regras de formata√ß√£o sem causar muitos conflitos ou problemas de merge ou integra√ß√£o continua. |
+| O Visual Studio possui uma interface gr√°fica para configurar o editorconfig, funciona autom√°tico sem plugins adicionais. | Com outros IDE como Rider de JetBrains, pode ter conflitos com algumas regras, √© melhor a equipe usar o mesmo IDE para evitar esses problemas. |
 
 ## Teste esse exemplo em local
 
-1. Clone o repositÛrio para sua m·quina local usando o comando `git clone https://github.com/KingDiegato/editorconfigExample.git`.
+1. Clone o reposit√≥rio para sua m√°quina local usando o comando `git clone https://github.com/KingDiegato/editorconfigExample.git`.
 
-2. Navegue atÈ o diretÛrio do projeto usando o terminal ou prompt de comando.  
+2. Navegue at√© o diret√≥rio do projeto usando o terminal ou prompt de comando.
+  
 3. Copie e use o comando `dotnet format --verify-no-changes .\editorconfigExample.sln --verbosity diagnostic` 
-para verificar se o cÛdigo est· seguindo as regras de formataÁ„o definidas no arquivo .editorconfig.
+para verificar se o c√≥digo est√° seguindo as regras de formata√ß√£o definidas no arquivo .editorconfig.
 
 4. Revise o output do comando e veja como foram revisadas as regras do .editorconfig e as advertencias
-especificadas ali, ele indica o arquivo, a linha e o span onde se encontra o erro e qual È o erro e uma 
-possivel soluÁ„o se houver
+especificadas ali, ele indica o arquivo, a linha e o span onde se encontra o erro e qual √© o erro e uma 
+possivel solu√ß√£o se houver
 
 ## Bibliografia
 
@@ -210,3 +211,6 @@ possivel soluÁ„o se houver
 - [dotnet format](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format)
 - [Enforce code Style](https://www.meziantou.net/enforce-dotnet-code-style-in-ci-with-dotnet-format.htm)
 - [dotnet format in Azure Pipelines](https://www.meziantou.net/enforce-dotnet-code-style-in-ci-with-dotnet-format.htm#azure-pipelines)
+
+### 10 Minutos de editorconfig para Visual Studio
+- https://www.youtube.com/watch?v=CQW5b58mPdg
